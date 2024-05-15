@@ -1,9 +1,9 @@
 package cmd
 
 import (
-	"ASAU-user-api/handler"
-	"ASAU-user-api/infrastructure"
-	"ASAU-user-api/service"
+	"backend/handler"
+	"backend/infrastructure"
+	"backend/service"
 
 	_ "github.com/lib/pq"
 )

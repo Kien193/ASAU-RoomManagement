@@ -1,6 +1,6 @@
 package main
 
-import "ASAU-user-api/cmd"
+import "backend/cmd"
 
 func main() {
 	server := cmd.ApiServer{}

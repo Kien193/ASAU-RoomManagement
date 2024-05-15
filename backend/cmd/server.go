@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"ASAU-user-api/domain/repository"
-	"ASAU-user-api/interfaces"
+	"backend/domain/repository"
+	"backend/interfaces"
 	"log"
 	"os"
 

@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"ASAU-user-api/domain/model"
-	"ASAU-user-api/interfaces"
+	"backend/domain/model"
+	"backend/interfaces"
 	"log"
 	"net/http"
 	"regexp"

@@ -1,8 +1,8 @@
 package infrastructure
 
 import (
-	"ASAU-user-api/domain/model"
-	"ASAU-user-api/domain/repository"
+	"backend/domain/model"
+	"backend/domain/repository"
 	"database/sql"
 	_ "embed"
 	"log"

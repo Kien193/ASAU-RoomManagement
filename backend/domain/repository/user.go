@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"ASAU-user-api/domain/model"
+	"backend/domain/model"
 	"database/sql"
 )
 
