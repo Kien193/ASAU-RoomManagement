@@ -11,6 +11,7 @@ import (
 type DatabaseRepositoryPGSQL struct {
 	Database repository.DatabaseInterface
 	apiUser  repository.UserRepositoryInterface
+	apiArea  repository.AreaRepositoryInterface
 }
 
 func NewDatabaseRepositoryPGSQL(
@@ -19,6 +20,7 @@ func NewDatabaseRepositoryPGSQL(
 	return &DatabaseRepositoryPGSQL{
 		Database: db,
 		apiUser:  NewUserRepository(),
+		apiArea:  NewAreaRepository(),
 	}
 }
 
@@ -49,4 +51,8 @@ func (p *DatabaseRepositoryPGSQL) Rollback(tx *sql.Tx) error {
 
 func (p *DatabaseRepositoryPGSQL) ApiUser() repository.UserRepositoryInterface {
 	return p.apiUser
+}
+
+func (p *DatabaseRepositoryPGSQL) ApiArea() repository.AreaRepositoryInterface {
+	return p.apiArea
 }

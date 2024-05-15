@@ -9,15 +9,15 @@ import (
 )
 
 var (
-	//go:embed sql/getAllUsers.sql
+	//go:embed sql/user/getAllUsers.sql
 	getAllUsers string
-	//go:embed sql/getUser.sql
+	//go:embed sql/user/getUser.sql
 	getUser string
-	//go:embed sql/postUser.sql
+	//go:embed sql/user/postUser.sql
 	postUser string
-	//go:embed sql/putUser.sql
+	//go:embed sql/user/putUser.sql
 	putUser string
-	//go:embed sql/deleteUser.sql
+	//go:embed sql/user/deleteUser.sql
 	deleteUser string
 )
 
