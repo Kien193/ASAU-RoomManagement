@@ -15,6 +15,10 @@ func (server *ApiServer) dependencyInjection() {
 		server.Password,
 	)
 	server.DatabaseRepositoryPGSQL = infrastructure.NewDatabaseRepositoryPGSQL(server.Database)
+
 	server.UserService = service.NewUserService(server.DatabaseRepositoryPGSQL)
+	server.AreaService = service.NewAreaService(server.DatabaseRepositoryPGSQL)
+
 	server.UserHandler = handler.NewUserHandler(server.UserService)
+	server.AreaHandler = handler.NewAreaHandler(server.AreaService)
 }
