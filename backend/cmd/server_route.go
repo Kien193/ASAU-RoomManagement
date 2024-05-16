@@ -1,6 +1,7 @@
 package cmd
 
 func (server *ApiServer) routes() {
+	// User API
 	server.groupUserAPI = server.echo.Group("/api/v1/users")
 	server.groupUserAPI.Use()
 	{
