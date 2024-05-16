@@ -12,8 +12,12 @@ import (
 const API_SERVER_DEFAULT_PORT = "8080"
 
 type ApiServer struct {
-	UserHandler             interfaces.UserHandlerInterface
-	UserService             interfaces.UserServiceInterface
+	UserHandler interfaces.UserHandlerInterface
+	AreaHandler interfaces.AreaHandlerInterface
+
+	UserService interfaces.UserServiceInterface
+	AreaService interfaces.AreaServiceInterface
+
 	DatabaseRepositoryPGSQL repository.DatabaseRepositoryPGSQLInterface
 	Database                repository.DatabaseInterface
 
@@ -24,6 +28,7 @@ type ApiServer struct {
 
 	echo         *echo.Echo
 	groupUserAPI *echo.Group
+	groupAreaAPI *echo.Group
 }
 
 func (server *ApiServer) Run() {

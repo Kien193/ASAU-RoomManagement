@@ -11,4 +11,15 @@ func (server *ApiServer) routes() {
 		server.groupUserAPI.PUT("/:id_khach_hang", server.UserHandler.UpdateUser())
 		server.groupUserAPI.DELETE("/:id_khach_hang", server.UserHandler.DeleteUser())
 	}
+
+	// Area API
+	server.groupAreaAPI = server.echo.Group("/api/v1/areas")
+	server.groupAreaAPI.Use()
+	{
+		server.groupAreaAPI.GET("", server.AreaHandler.GetAreas())
+		server.groupAreaAPI.GET("/:id_khu_vuc", server.AreaHandler.GetArea())
+		server.groupAreaAPI.POST("", server.AreaHandler.CreateArea())
+		server.groupAreaAPI.PUT("/:id_khu_vuc", server.AreaHandler.UpdateArea())
+		server.groupAreaAPI.DELETE("/:id_khu_vuc", server.AreaHandler.DeleteArea())
+	}
 }
