@@ -14,9 +14,11 @@ const API_SERVER_DEFAULT_PORT = "8080"
 type ApiServer struct {
 	UserHandler interfaces.UserHandlerInterface
 	AreaHandler interfaces.AreaHandlerInterface
+	RoomHandler interfaces.RoomHandlerInterface
 
 	UserService interfaces.UserServiceInterface
 	AreaService interfaces.AreaServiceInterface
+	RoomService interfaces.RoomServiceInterface
 
 	DatabaseRepositoryPGSQL repository.DatabaseRepositoryPGSQLInterface
 	Database                repository.DatabaseInterface
@@ -29,6 +31,7 @@ type ApiServer struct {
 	echo         *echo.Echo
 	groupUserAPI *echo.Group
 	groupAreaAPI *echo.Group
+	groupRoomAPI *echo.Group
 }
 
 func (server *ApiServer) Run() {

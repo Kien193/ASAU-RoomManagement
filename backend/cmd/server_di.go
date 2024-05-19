@@ -18,7 +18,9 @@ func (server *ApiServer) dependencyInjection() {
 
 	server.UserService = service.NewUserService(server.DatabaseRepositoryPGSQL)
 	server.AreaService = service.NewAreaService(server.DatabaseRepositoryPGSQL)
+	server.RoomService = service.NewRoomService(server.DatabaseRepositoryPGSQL)
 
 	server.UserHandler = handler.NewUserHandler(server.UserService)
 	server.AreaHandler = handler.NewAreaHandler(server.AreaService)
+	server.RoomHandler = handler.NewRoomHandler(server.RoomService)
 }

@@ -12,6 +12,7 @@ type DatabaseRepositoryPGSQL struct {
 	Database repository.DatabaseInterface
 	apiUser  repository.UserRepositoryInterface
 	apiArea  repository.AreaRepositoryInterface
+	apiRoom  repository.RoomRepositoryInterface
 }
 
 func NewDatabaseRepositoryPGSQL(
@@ -21,6 +22,7 @@ func NewDatabaseRepositoryPGSQL(
 		Database: db,
 		apiUser:  NewUserRepository(),
 		apiArea:  NewAreaRepository(),
+		apiRoom:  NewRoomRepository(),
 	}
 }
 
@@ -55,4 +57,8 @@ func (p *DatabaseRepositoryPGSQL) ApiUser() repository.UserRepositoryInterface {
 
 func (p *DatabaseRepositoryPGSQL) ApiArea() repository.AreaRepositoryInterface {
 	return p.apiArea
+}
+
+func (p *DatabaseRepositoryPGSQL) ApiRoom() repository.RoomRepositoryInterface {
+	return p.apiRoom
 }

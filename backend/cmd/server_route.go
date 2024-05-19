@@ -22,4 +22,15 @@ func (server *ApiServer) routes() {
 		server.groupAreaAPI.PUT("/:id_khu_vuc", server.AreaHandler.UpdateArea())
 		server.groupAreaAPI.DELETE("/:id_khu_vuc", server.AreaHandler.DeleteArea())
 	}
+
+	// Room API
+	server.groupRoomAPI = server.echo.Group("/api/v1/rooms")
+	server.groupRoomAPI.Use()
+	{
+		server.groupRoomAPI.GET("", server.RoomHandler.GetRooms())
+		server.groupRoomAPI.GET("/:id_phong", server.RoomHandler.GetRoom())
+		server.groupRoomAPI.POST("", server.RoomHandler.CreateRoom())
+		server.groupRoomAPI.PUT("/:id_phong", server.RoomHandler.UpdateRoom())
+		server.groupRoomAPI.DELETE("/:id_phong", server.RoomHandler.DeleteRoom())
+	}
 }
