@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/homeView.vue'
+import HomeView from '@/views/homeView.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -16,7 +16,7 @@ const router = createRouter({
     },
     {
       path: '/about',
-      component: () => import('../views/aboutView.vue')
+      component: () => import('@/views/aboutView.vue')
     },
     {
       path: '/:pathMatch(.*)*',

@@ -43,7 +43,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import logoURL from '../assets/logo.svg'
+import logoURL from '@/assets/logo.svg'
 
 const is_expanded = ref(localStorage.getItem("is_expanded") === "true")
 
