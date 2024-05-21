@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
+import HomeView from '../views/HomeView.vue'
 
 export const constantRoutes = [
   {
     path: '/404',
-    component: () => import('@/views/404View.vue'),
+    component: () => import('../views/404View.vue'),
     hidden: true
   },
   {
@@ -15,7 +15,7 @@ export const constantRoutes = [
   {
     path: '/about',
     name: 'about',
-    component: () => import('@/views/AboutView.vue')
+    component: () => import('../views/AboutView.vue')
   },
   { path: '*', redirect: '/404', hidden: true }
 ]
