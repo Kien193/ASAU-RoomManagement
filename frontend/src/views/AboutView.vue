@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an About page</h1>
+    <h1>This is an about page</h1>
   </div>
 </template>
 
@@ -10,8 +10,6 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    position: fixed;
-    left: 50%;
   }
 }
 </style>
