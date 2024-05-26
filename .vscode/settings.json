@@ -10,5 +10,8 @@
       "username": "postgres",
       "password": "123456"
     }
+  ],
+  "cSpell.words": [
+    "unplugin"
   ]
 }
