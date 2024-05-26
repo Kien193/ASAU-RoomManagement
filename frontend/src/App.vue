@@ -1,23 +1,14 @@
 <template>
 	<div class="app">
-		<!-- Sidebar -->
 		<Sidebar />
-
-		<!-- Header -->
-		<Header />
-
-		<!-- Content -->
 		<router-view />
-
-		<!-- Footer -->
-		<Footer />
 	</div>
 </template>
 
 <script setup>
-import Header from '@/components/Headers/DashboardHeader.vue'
+
 import Sidebar from '@/components/Sidebars/DashboardSidebar.vue'
-import Footer  from '@/components/Footers/DashboardFooter.vue'
+
 </script>
 
 <style lang="scss">
